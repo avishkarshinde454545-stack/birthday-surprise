@@ -1,30 +1,30 @@
 const steps = [
 
 {
-image:"images/rohit1.jpg",
+image:"images/rohit1.png",
 heading:"Hello Jiii 👋",
 message:"Before you continue...<br><br>I have a tiny surprise prepared just for you.",
 button:"Continue →"
 },
 
 {
-image:"images/rohit2.jpg",
+image:"images/rohit2.png",
 heading:"Just one small request... ✨",
 message:"May I borrow a few moments from your valuable time?<br><br>I promise it'll be worth every second. 🌸",
 button:"Grant Permission 💌"
 },
 
 {
-image:"images/rohit3.jpg",
+image:"images/rohit3.png",
 heading:"Finally... 😄",
 message:"Thank you for staying till here.<br><br>Now it's time for the real reason behind all this...",
 button:"Reveal Surprise 🎁"
 },
 
 {
-image:"images/rohit3.jpg",
+image:"images/rohit3.png",
 heading:"🎉 Happy Birthday! 🎉",
-message:"Wishing you a day filled with laughter, happiness and countless beautiful moments.<br><br>Hope this year brings you everything you've been wishing for! ✨💛",
+message:"Today is all about celebrating you.<br><br>May your day be filled with smiles, your year with success, and your life with countless beautiful memories.<br><br>Happy Birthday! 🎂✨",
 button:"Open Gallery 📸"
 }
 
@@ -49,40 +49,35 @@ const galleryNext = document.getElementById("galleryNext");
 
 function showStep(){
 
-image.classList.add("fadeOut");
-heading.classList.add("fadeOut");
-message.classList.add("fadeOut");
+image.style.opacity = "0";
+heading.style.opacity = "0";
+message.style.opacity = "0";
 
 setTimeout(()=>{
 
-image.src=steps[current].image;
-heading.innerHTML=steps[current].heading;
-message.innerHTML=steps[current].message;
-nextBtn.innerHTML=steps[current].button;
+image.src = steps[current].image;
+heading.innerHTML = steps[current].heading;
+message.innerHTML = steps[current].message;
+nextBtn.innerHTML = steps[current].button;
 
-image.classList.remove("fadeOut");
-heading.classList.remove("fadeOut");
-message.classList.remove("fadeOut");
+image.style.opacity = "1";
+heading.style.opacity = "1";
+message.style.opacity = "1";
 
-image.classList.add("fadeIn");
-heading.classList.add("fadeIn");
-message.classList.add("fadeIn");
-
-backBtn.disabled=current===0;
+backBtn.disabled = current === 0;
 
 },300);
 
 }
 
-nextBtn.onclick=()=>{
+nextBtn.onclick = ()=>{
 
-if(current<steps.length-1){
+if(current < steps.length-1){
 
 current++;
 showStep();
 
 }
-
 else{
 
 container.style.display="none";
@@ -92,7 +87,7 @@ gallery.style.display="block";
 
 };
 
-backBtn.onclick=()=>{
+backBtn.onclick = ()=>{
 
 if(current>0){
 
@@ -103,19 +98,19 @@ showStep();
 
 };
 
-galleryNext.onclick=()=>{
+galleryNext.onclick = ()=>{
 
 gallery.style.display="none";
 finalPage.style.display="flex";
 
 };
 
-galleryBack.onclick=()=>{
+galleryBack.onclick = ()=>{
 
 gallery.style.display="none";
 container.style.display="flex";
 
-current=steps.length-1;
+current = steps.length-1;
 
 showStep();
 
