@@ -1,10 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🎂 Birthday Surprise</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
 <body>
 
-<h1>Testing...</h1>
+<div class="background"></div>
 
-<img src="images/rohit1.jpg" width="500">
+<div class="container">
+
+    <div class="card">
+
+        <img
+            id="mainImage"
+            src="images/rohit1.png"
+            alt="Birthday Image"
+            class="heroImage"
+        >
+
+        <h1 id="heading">
+            Hello Jiii 👋
+        </h1>
+
+        <p id="message">
+            Before you continue...
+            <br><br>
+            I have a tiny surprise prepared just for you.
+        </p>
+
+        <div class="buttons">
+
+            <button id="backBtn" disabled>
+                ← Back
+            </button>
+
+            <button id="nextBtn">
+                Continue →
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= Gallery ================= -->
+
+<section id="gallerySection" class="hidden">
+
+    <h1>Some Beautiful Moments 📸</h1>
+
+    <p class="galleryIntro">
+        Every picture tells a beautiful story,
+        and these are some of my favourites.
+    </p>
+
+    <div class="gallery-grid">
+
+        <img src="images/girl1.jpg">
+        <img src="images/girl2.jpg">
+        <img src="images/girl3.jpg">
+        <img src="images/girl4.jpg">
+        <img src="images/girl5.jpg">
+        <img src="images/girl6.jpg">
+
+    </div>
+
+    <div class="buttons">
+
+        <button id="galleryBack">
+            ← Back
+        </button>
+
+        <button id="galleryNext">
+            Continue →
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= Final ================= -->
+
+<section id="finalSection" class="hidden">
+
+    <h1>🎉 Thank You 🎉</h1>
+
+    <p>
+
+        Hope this little surprise made you smile.
+
+        <br><br>
+
+        Once again...
+
+        <br><br>
+
+        <strong>Happy Birthday! 🎂✨</strong>
+
+        <br><br>
+
+        Wishing you lots of happiness, success and unforgettable memories.
+
+    </p>
+
+    <div class="signature">
+
+        Made with ❤️
+
+        <br>
+
+        <span>— aviii</span>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
 
 </body>
 </html>
